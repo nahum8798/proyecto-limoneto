@@ -4,13 +4,19 @@
     box-sizing: border-box;
 }
 
+:root {
+
+    --color1: #1C120C;
+    --color2: #FFC700;
+}
 
 
 
 .img-container {
  
     background-repeat: no-repeat;
-    
+    background-color: var(--color1);
+
     height: 100vh;
     max-height: 100vh; /* esto asegura que el contenedor no exceda la altura maxima de la pantalla*/
     overflow: hidden;   /* esto evita que la imagen desborder si es mas alta*/
@@ -19,12 +25,59 @@
     justify-content: center;
     align-items: center;
 
-    border: 2px solid red;
+    position: relative;
 }
 
 .img-container .img-portada {
     margin: 0 auto;
     
     height: 100%;
+    width: auto;
     max-width: 100%;
+    
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: var(--color2);
+    opacity: 50%;
+
+    
+    padding: 8rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.title h1{
+    color: white;
+    font-size: 2rem;
+
+    position: relative;
+    left: 50%;
+    
+}
+
+.title h1::first-letter {
+    font-size: inherit; /* Mantenemos el tamaño de fuente original */
+    font-weight: bold; /* Opcional: hacemos la letra inicial en negrita */
+    color: white; /* Ocultamos la letra 'L' para mostrar solo el icono */
+
+}
+
+.title h1::first-letter::before {
+    content: "/* game-icons:cut-lemon */"; /* Insertamos el icono como contenido */
+    display: inline-block; /* Mostramos el contenido como un bloque en línea */
+    width: 74px;
+    height: 64px;
+    margin-right: 5px; /* Ajustamos el margen si es necesario */
 }
