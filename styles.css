@@ -4,6 +4,27 @@
     box-sizing: border-box;
 }
 
+
+
+
 .img-container {
-    background-image: url(assets/images/image1.png);
+ 
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    max-height: 100vh; /* esto asegura que el contenedor no exceda la altura maxima de la pantalla*/
+    overflow: hidden;   /* esto evita que la imagen desborder si es mas alta*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid red;
+}
+
+.img-container .img-portada {
+    margin: 0 auto;
+    
+    height: 100%;
+    max-width: 100%;
 }
